@@ -1,11 +1,9 @@
 package com.frasergen;
 
+import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 //@RestControllerAdvice
 //@EnableAutoConfiguration
@@ -20,6 +18,8 @@ public class FrasergenHrApplication {
 	
 	
 	public static void main(String[] args) {
-		SpringApplication.run(FrasergenHrApplication.class, args);
+		SpringApplication app =new SpringApplication(FrasergenHrApplication.class);
+		app.setBannerMode(Banner.Mode.OFF);
+		app.run(args);
 	}
 }
